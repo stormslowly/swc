@@ -394,10 +394,7 @@ impl Compiler {
                 };
                 match result {
                     Ok(r) => r,
-                    Err(err) => {
-                        tracing::error!("failed to read input source map: {:?}", err);
-                        None
-                    }
+                    Err(_) => None,
                 }
             };
 

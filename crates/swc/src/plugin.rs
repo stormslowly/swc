@@ -238,7 +238,6 @@ pub(crate) fn compile_wasm_plugins(
             };
 
             inner_cache.store_bytes_from_path(plugin_runtime, &path, plugin_name)?;
-            tracing::debug!("Initialized WASM plugin {plugin_name}");
         }
     }
 

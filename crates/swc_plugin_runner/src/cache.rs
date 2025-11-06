@@ -116,7 +116,6 @@ impl PluginModuleCacheInner {
 
                 let module =
                     if let Some(cache) = unsafe { fs_cache_store.load(rt, &module_bytes_hash) } {
-                        tracing::debug!("Build WASM from cache: {key}");
                         cache
                     } else {
                         let cache = rt
