@@ -222,7 +222,6 @@ struct FileSystemCache {
 
 #[cfg(all(not(target_arch = "wasm32"), feature = "filesystem_cache"))]
 impl FileSystemCache {
-    #[tracing::instrument(level = "info", skip_all)]
     fn create(root: Option<&str>) -> Option<Self> {
         let mut root_path = if let Some(root) = root {
             Some(PathBuf::from(root))
